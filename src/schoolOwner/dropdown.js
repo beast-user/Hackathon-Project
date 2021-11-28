@@ -11,9 +11,9 @@ export default function Menus(props) {
   console.log(props)
   return (
     <div style={{
-      display: 'block', width: 700, padding: 30
+      display: 'block', width: props.width, padding: 30
     }}>
-      <h4>ReactJS Ant-Design Dropdown Component</h4>
+      {/* <h4>ReactJS Ant-Design Dropdown Component</h4> */}
       <>
         {/* <Dropdown
           overlay={(
@@ -30,7 +30,7 @@ export default function Menus(props) {
       </Button>
         </Dropdown> */}
 
-    <Select placeholder={props.title} style={{ width: 120 }} onChange={a => props.setSelectedOption(a)}>
+    <Select size='medium' placeholder={props.title} onChange={a => props.setSelectedOption(a)}>
     {props.dropdownData.map((data) => <Option value={data}>{data}</Option>)}
     </Select>
       </>

@@ -28,11 +28,11 @@ function Login({setVissibility}) {
   return (
       <div>
 
-      {login && <div class="paddingTop">
-        <div class = "login-box">
+      {login && <div className="paddingTop">
+        <div className = "login-box">
 
 <div>
-<div class="login-title">Login to your Account</div><br /><br />
+<div className="login-title">Login to your Account</div><br /><br />
   <div>
     Mobile<br />
     <input type="text" {...username} autoComplete="new-password" />
@@ -48,7 +48,7 @@ function Login({setVissibility}) {
       </div> 
       }
        { parent && <ParentSection setVissibility={ setVissibility} ></ParentSection>}
-        {school && <OwnerSection></OwnerSection>}
+        {school && <OwnerSection setVissibility={null}></OwnerSection>}
       </div>
   );
 }
